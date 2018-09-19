@@ -1,0 +1,16 @@
+<h1 class="todo-header">To Do Items</h1>
+<div class="container">
+    <button class="new-todo-btn">Add To Do</button>
+    <div class="panel">
+        <form class="new-todo" action="#">
+            <input type="text" name="item" value="{{todos.item}}" class="todo-input">
+            <button class="save-btn">Save</button>
+        </form>
+    </div>
+    <div class="todos-container" id="todos-container">
+        {{# each todos}}
+        <a href="/todos/{{this._id}}"><h2>{{this.item}}</h2></a>
+        {{/each}}
+    </div>
+    <button class="delete-todos" onClick="clearAllItems()">Clear All Items</button>
+</div>
